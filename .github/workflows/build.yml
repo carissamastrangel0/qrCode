@@ -1,0 +1,54 @@
+name: project_build_and_test
+
+on: [push]
+
+env:
+  EXE_NAME: YourExecutableName # Replace with the name of your project's executable
+
+jobs:
+  build:
+    name: Project_Building
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Checkout project repo from GitHub
+        uses: actions/checkout@v2
+
+      - name: Setup Environment
+        run: |
+          echo "Executable Name: $EXE_NAME"
+          echo "Runner Workspace: ${{runner.workspace}}"
+          echo "GitHub Workspace: $GITHUB_WORKSPACE"
+          g++ --version
+          cmake --version
+
+      - name: Create build environment
+        run: mkdir ${{runner.workspace}}/build
+
+      - name: Configure the build
+        shell: bash
+        working-directory: ${{runner.workspace}}/build
+        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build the project
+        working-directory: ${{runner.workspace}}/build
+        run: cmake --build .
+
+      - name: Run the project
+        working-directory: ${{runner.workspace}}/build
+        run: ./$EXE_NAME # Add any necessary command line arguments
+
+      # Uncomment and modify the following steps if you need to copy and upload output files
+      # - name: Copy output files to artifact directory
+      #   working-directory: ${{runner.workspace}}/build
+      #   run: |
+      #     mkdir artifacts
+      #     # Update the path to your output files if needed
+      #     cp $GITHUB_WORKSPACE/output_files/* artifacts/
+
+      # - name: Upload output files to GitHub
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: project_output
+      #     path: ${{runner.workspace}}/build/artifacts
