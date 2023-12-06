@@ -1,9 +1,9 @@
-name: project_build_and_test
+name: finalProject
 
 on: [push]
 
 env:
-  EXE_NAME: YourExecutableName # Replace with the name of your project's executable
+  EXE_NAME: project
 
 jobs:
   build:
