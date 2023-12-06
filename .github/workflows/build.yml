@@ -37,7 +37,7 @@ jobs:
 
       - name: Run the project
         working-directory: ${{runner.workspace}}/build
-        run: ./$EXE_NAME google.com ~/Desktop/CS3520/pa05/qrCode/output/qrCode.svg #FF69B4 #FFFFF
+        run: ./$EXE_NAME google.com $GITHUB_WORKSPACE/output/qrCode.svg #FF69B4 #FFFFF
 
       # Uncomment and modify the following steps if you need to copy and upload output files
       # - name: Copy output files to artifact directory
