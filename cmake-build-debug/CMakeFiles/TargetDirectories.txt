@@ -1,0 +1,3 @@
+/Users/carissamastrangelo/Desktop/CS3520/pa05/qrCode/cmake-build-debug/CMakeFiles/qrCode.dir
+/Users/carissamastrangelo/Desktop/CS3520/pa05/qrCode/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/carissamastrangelo/Desktop/CS3520/pa05/qrCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir
