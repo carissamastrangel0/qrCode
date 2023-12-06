@@ -1,9 +1,9 @@
-name: finalProject
+name: qrCode
 
 on: [push]
 
 env:
-  EXE_NAME: qrCode
+  EXE_NAME: project
 
 jobs:
   build:
