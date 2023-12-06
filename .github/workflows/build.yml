@@ -37,7 +37,7 @@ jobs:
 
       - name: Run the project
         working-directory: ${{runner.workspace}}/build
-        run: ./$EXE_NAME # Add any necessary command line arguments
+        run: ./$EXE_NAME google.com /Users/carissamastrangelo/Desktop/qrCode.svg #FF69B4 #FFFFF
 
       # Uncomment and modify the following steps if you need to copy and upload output files
       # - name: Copy output files to artifact directory
