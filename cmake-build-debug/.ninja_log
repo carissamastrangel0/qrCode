@@ -1,14 +1,12 @@
 # ninja log v5
-3	460	1701828010264726934	CMakeFiles/qrCode.dir/src/qrcodegen.cpp.o	14d7794dc0c2bbb4
-7	479	1701827897704773425	CMakeFiles/qrCode.dir/qrcodegen.cpp.o	2a1173d29386fe18
-3	508	1701827848571535506	CMakeFiles/qrCode.dir/qrcodegen/cpp/qrcodegen.cpp.o	81c5bc007e64c8a3
-3	26	1701827903688909957	CMakeFiles/qrCode.dir/QrCodeGeneratorDemo.cpp.o	d70064b117ac374d
+8	378	1701885850573635590	CMakeFiles/qrCode.dir/main.cpp.o	79fc65d4c20ab0e1
+1	57	1701885861389498684	build.ninja	291287ba4be8f5ab
+475	527	1701885850724884884	qrCode	30d96362a12ff167
 3	42	1701827664783823146	CMakeFiles/qrCode.dir/qrcodegen/cpp/QrCodeGeneratorDemo.cpp.o	9c009777043000a2
-364	406	1701830272455920696	qrCode	30d96362a12ff167
-0	58	1701830649712192813	build.ninja	291287ba4be8f5ab
-3	364	1701830272412331897	CMakeFiles/qrCode.dir/main.cpp.o	79fc65d4c20ab0e1
-3	46	1701831837666063344	CMakeFiles/qrCode.dir/main.cpp.o	79fc65d4c20ab0e1
-7	386	1701831980348383178	CMakeFiles/qrCode.dir/main.cpp.o	79fc65d4c20ab0e1
-386	429	1701831980393266268	qrCode	30d96362a12ff167
-3	402	1701833180282599072	CMakeFiles/qrCode.dir/main.cpp.o	79fc65d4c20ab0e1
-402	457	1701833180339822655	qrCode	30d96362a12ff167
+3	26	1701827903688909957	CMakeFiles/qrCode.dir/QrCodeGeneratorDemo.cpp.o	d70064b117ac374d
+3	508	1701827848571535506	CMakeFiles/qrCode.dir/qrcodegen/cpp/qrcodegen.cpp.o	81c5bc007e64c8a3
+7	479	1701827897704773425	CMakeFiles/qrCode.dir/qrcodegen.cpp.o	2a1173d29386fe18
+8	475	1701885850669812512	CMakeFiles/qrCode.dir/src/qrcodegen.cpp.o	14d7794dc0c2bbb4
+0	91	1701885861389498684	build.ninja	291287ba4be8f5ab
+7	490	1701886201437989344	CMakeFiles/qrCode.dir/main.cpp.o	79fc65d4c20ab0e1
+490	533	1701886201484721348	qrCode	30d96362a12ff167

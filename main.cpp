@@ -2,7 +2,6 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <vector>
 #include "include/qrcodegen.hpp"
 
 using namespace std;
@@ -15,36 +14,26 @@ static string toSvgString(const QrCode &qr, string backgroundColor, string bitCo
 
 int main(int argc, char *argv[]) {
     if (argc < 5) {
-        cerr << "Usage: " << argv[0] << " <URL> <Output File> <Background Color> <Bit Color>" << endl;
+        std::cerr << "Usage error" << std::endl;
         return 1;
     }
-
-    const char *URL = argv[1];
-
-    // Check if output file can be opened
+    const char *URL(argv[1]);
     ofstream outputFile(argv[2]);
-    if (!outputFile) {
-        cerr << "Error: Cannot open file " << argv[2] << endl;
-        return 1;
-    }
+    string backgroundColor(argv[3]);
+    string bitColor(argv[4]);
 
-    string backgroundColor = argv[3];
-    string bitColor = argv[4];
+    // generate QR Code error level
+    const QrCode::Ecc errCorr = QrCode::Ecc::HIGH;
+    // generate QR Code object for toSvgString
+    const QrCode qr = QrCode::encodeText(URL, errCorr);
 
-    try {
-        const QrCode::Ecc errCorr = QrCode::Ecc::HIGH;
-        const QrCode qr = QrCode::encodeText(URL, errCorr);
+    string svgString = toSvgString(qr, backgroundColor, bitColor);
 
-        string svgString = toSvgString(qr, backgroundColor, bitColor);
-        outputFile << svgString;
-    } catch (const std::exception &e) {
-        cerr << "Error occurred: " << e.what() << endl;
-        outputFile.close();
-        return 1;
-    }
-
+    outputFile << svgString;
     outputFile.close();
+
     return 0;
+
 }
 
 string toSvgString(const QrCode &qr, string backgroundColor, string bitColor) {

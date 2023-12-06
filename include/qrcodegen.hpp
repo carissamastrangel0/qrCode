@@ -28,6 +28,8 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+//#include <Magick++.h>
+
 
 
 namespace qrcodegen {

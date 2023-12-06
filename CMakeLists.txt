@@ -9,3 +9,5 @@ add_executable(qrCode main.cpp
         main.cpp
 )
 
+
+
